@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispositivos IoT - App 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">IoT Manager</a>
+      <a href="monitor.html" class="btn btn-outline-light ms-auto">Ver Monitor (Últimos 10)</a>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <h2 class="mb-4">Panel de Control - Últimos 5 registros</h2>
+
+    <!-- Formulario -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <form id="statusForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre del dispositivo</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Estado</label>
+            <select id="status" class="form-select" required>
+              <option value="adelante">Adelante</option>
+              <option value="atrás">Atrás</option>
+              <option value="detener">Detener</option>
+              <option value="adelante derecha">Adelante derecha</option>
+              <option value="adelante izquierda">Adelante izquierda</option>
+              <option value="atrás izquierda">Atrás izquierda</option>
+              <option value="atrás derecha">Atrás derecha</option>
+              <option value="giro 90° derecha">Giro 90° derecha</option>
+              <option value="giro 90° izquierda">Giro 90° izquierda</option>
+              <option value="giro 360° derecha">Giro 360° derecha</option>
+              <option value="giro 360° izquierda">Giro 360° izquierda</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <h4>Últimos 5 registros</h4>
+    <table class="table table-striped" id="recordsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Dispositivo</th>
+          <th>Status</th>
+          <th>IP</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Último status -->
+    <div class="alert alert-info mt-3" id="lastStatus">
+      Último status: <span class="fw-bold">--</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    Desarrollado por Amanda Cabrales Vega © 2025
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

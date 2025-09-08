@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispositivos IoT - Monitor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">IoT Monitor</a>
+      <a href="index.html" class="btn btn-outline-light ms-auto">Volver al Panel (Últimos 5)</a>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <h2 class="mb-4">Monitor en tiempo real - Últimos 10 registros</h2>
+
+    <!-- Último status ARRIBA -->
+    <div class="mb-4">
+      <h4>Último Status</h4>
+      <div id="lastStatus" class="alert">
+        Último status: <span class="fw-bold">--</span>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <table class="table table-striped" id="recordsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Dispositivo</th>
+          <th>Status</th>
+          <th>IP</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    Desarrollado por Amanda Cabrales Vegagit © 2025
+  </footer>
+
+  <script src="js/monitor.js"></script>
+</body>
+</html>
